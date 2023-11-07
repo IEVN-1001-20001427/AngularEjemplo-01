@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar</title>
-</head>
-<body>
-    <h1>Alumnos</h1>
-</body>
-</html>
+<div class="row">
+    <form [formGroup]="alumno" (ngSubmit)="onSubmit()" class="col-8 mx-auto">
+        <div class="mb-3">
+            <label class="form-label" for="matricula">Matricula</label>
+            <input class="form-control" formControlName="matricula" type="text" placeholder="Matricula" name="matricula" id="matricula">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="nombre">NOmbre</label>
+            <input class="form-control" formControlName="nombre" type="text" placeholder="Nombre" name="nombre" id="nombre">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="apaterno">Apellido Paterno</label>
+            <input class="form-control" formControlName="apaterno" type="text" placeholder="Apellido Paterno" name="apaterno" id="apaterno">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="amaterno">Apellido Materno</label>
+            <input class="form-control" formControlName="amaterno" type="text" placeholder="Apellido Materno" name="amaterno" id="amaterno">
+        </div>        
+        <div class="mb-3">
+            <label class="form-label" for="correo">Correo</label>
+            <input class="form-control" formControlName="correo" type="text" placeholder="Correo" name="correo" id="correo">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Agregar</button>
+        </div>
+    </form>
+</div>
